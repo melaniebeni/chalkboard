@@ -14,7 +14,7 @@ All users must log in with their email and password to gain access to appropriat
 ### Student View
 This website will allow students to add courses with instructor permission then after be able to view and complete assignments for that course to be graded by the instructor.
 
-![alt text](Student pg 1.jpg)
+![alt text](Student1.jpg)
 ![alt text](Student2.jpg)
 
 ### Instructor View
@@ -22,8 +22,8 @@ This website will allow students to add courses with instructor permission then 
 The instructors will be able to add and edit courses adding attributes like assignments, other instructors, and other related details seen below. They also have the ability to view items unavalible to the students view like rosters, answer keys, and have the ability to manually grade student assignments.  
 
 ![alt text](Instructor1.jpg)
-![alt text](Instructor 2.jpg)
-![alt text](Instructor 3.jpg)
+![alt text](Instructor2.jpg)
+![alt text](Instructor3.jpg)
 
 ### Admin View
 
