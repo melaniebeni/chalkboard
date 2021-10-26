@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment</title>
+</head>
+<body>
+<div>
+<div class="nav" id="devnav">
+  <a href="StudentView1.html">Home</a>
+  <div class="dropdown">
+    <!-- Not including completed or current -->
+    <button class="dropbutton">Lessons</button>
+    <div class="dropdown-content">
+      <a href="">Lesson3</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <!-- Not including completed or current -->
+    <button class="dropbutton">Assignments</button>
+    <div class="dropdown-content">
+      <a href="">Assignment 3</a>
+    </div>
+  </div>
+  <a href="homepage.html">Logout</a>
+    </div>
+
+  <form id="login" method="get" action="login.php">
+    <!--Question 1 -->
+    <label><b>User Name</b></label>
+    <br><br>
+    <input type="text" name="Q1" id="Q1" placeholder="Question 1">
+    <br><br>
+    <label><b>Password</b></label>
+    <br><br>
+    <input type="Password" name="Pass" id="Pass" placeholder="Password">
+    <br><br>
+    <button id="myButton" class="float-left submit-button" onclick="myFunction()">Click me</button>
+    <br><br>
+    <script type="text/javascript">
+      document.getElementById("myButton").onclick = function () {
+        location.href = ".html";
+      };
+    </script>
+  </form>
+</div>
+</body>
+</html>

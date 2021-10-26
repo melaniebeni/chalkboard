@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math</title>
+</head>
+<body>
+<div class="nav" id="devnav">
+    <a href="StudentView1.html">Home</a>
+    <div class="dropdown">
+        <!-- Not including completed or current -->
+        <button class="dropbutton">Lessons</button>
+        <div class="dropdown-content">
+            <a href="">Lesson3</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <!-- Not including completed or current -->
+        <button class="dropbutton">Assignments</button>
+        <div class="dropdown-content">
+            <a href="">Assignment 3</a>
+        </div>
+    </div>
+    <a href="homepage.html">Logout</a>
+</div>
+</div>
+<div class="icview">
+<h1>coursename</h1>
+    <div class="courseimg">
+        <a href="math.jpeg">
+            <img  alt="courseimg" src="math.jpeg" width="900" height="300">
+        </a>
+    </div>
+</div>
+<div class="more" id="more">
+    <button type="button" onclick=>More</button>
+</div>
+<form action="//www.html.am/html-codes/forms/html-form-tag-action.cfm" target="result2" method="get">
+    <p>Lessons</p>
+    <select name="lesson" multiple>
+        <option value ="Lesson1">Lesson </option>
+        <option value ="guava">Guava</option>
+        <option value ="lychee">Lychee</option>
+        <option value ="papaya">Papaya</option>
+        <option value ="watermelon">Watermelon</option>
+    </select>
+    <div class="lessons" id="Lessons">
+        <button type="button" onclick=>More</button>
+    </div>
+</form>
+<form action="//www.html.am/html-codes/forms/html-form-tag-action.cfm" target="result2" method="get">
+    <p>What would you like for lunch?</p>
+    <select name="fruit" multiple>
+        <option value ="none">Nothing</option>
+        <option value ="guava">Guava</option>
+        <option value ="lychee">Lychee</option>
+        <option value ="papaya">Papaya</option>
+        <option value ="watermelon">Watermelon</option>
+    </select>
+    <div class="lessons" id="Lessons">
+        <button type="button" onclick=>More</button>
+    </div>
+</form>
+<script type="text/javascript">
+    document.getElementById("Lessons").onclick = function () {
+        location.href = ".html";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Assignments").onclick = function () {
+        location.href = "InstructorView/GradeStudentWork.html";
+    };
+</script>
+
+
+</div>
+</body>
+</html>
