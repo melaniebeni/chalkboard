@@ -24,9 +24,16 @@
             document.getElementById("myButton").addEventListener('click', function(e) {
                 e.preventDefault();
                 let ans= document.getElementById('Username').value;
-             if( ans == "student" ){
+                let pass= document.getElementById('Pass').value;
+             if( ans == "student" && pass=="student"){
                 location.href = "StudentView1.html";
               }
+               else if( ans == "instructor" && pass=="instructor"){
+                    location.href = "InstructorView1.html";
+                }
+             else if( ans == "admin" && pass=="admin"){
+                 location.href = "AdminView1.html";
+             }
             });
 
         </script>

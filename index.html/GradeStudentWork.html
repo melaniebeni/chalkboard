@@ -5,24 +5,28 @@
     <title>View/Grade Student Work</title>
 </head>
 <body>
+<label for="students">Choose a Student:</label>
 
-<form id="login" method="get" action="login.php">
-    <!--Question 1 -->
-    <label><b>User Name</b></label>
-    <br><br>
-    <input type="text" name="Username" id="Username" placeholder="Username">
-    <br><br>
-    <label><b>Password</b></label>
-    <br><br>
-    <input type="Password" name="Pass" id="Pass" placeholder="Password">
-    <br><br>
-    <button id="myButton" class="float-left submit-button" onclick="myFunction()">Click me</button>
-    <br><br>
-    <script type="text/javascript">
-        document.getElementById("myButton").onclick = function () {
-            location.href = ".html";
-        };
-    </script>
-</form>
+<select name="student" id="students">
+    <option value="Sam ">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+</select>
+<select name="Versions" id="version">
+    <option value="Sam ">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+</select>
+
+<input type="checkbox" id="Q1" name="vehicle1" value="Bike">
+<label for="Q1"> I have a bike</label><br>
+
+<input type="checkbox" id="Q2" name="vehicle2" value="Car">
+<label for="Q2"> I have a car</label><br>
+<input type="checkbox" id="Q3" name="vehicle3" value="Boat">
+<label for="Q3"> I have a boat</label><br>
+ <!-- Answers -->
 </body>
 </html>

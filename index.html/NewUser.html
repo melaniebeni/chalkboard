@@ -27,11 +27,24 @@
 
 
 
-        <p>Already have an account <a href="#" style="color:dodgerblue">Login Here</a>.</p>
+        <p>Already have an account <a href="login.html" style="color:dodgerblue">Login Here</a>.</p>
 
-        <div class="clearfix">
-            <button type="button" class="cancelbtn">Cancel</button>
-            <button type="submit" class="signupbtn">Sign Up</button>
+        <div class="buttons">
+            <button id="cancel" class="float-left submit-button" onclick="myFunction()">Cancel</button>
+            <button id="signup" class="float-left submit-button" onclick="myFunction()">Sign Up</button>
+            <script type="text/javascript">
+                document.getElementById("cancel").addEventListener('click', function(e) {
+                    e.preventDefault();
+                    let pass= document.getElementById('cancel').value;
+                        location.href = "homepage.html";
+                });
+                document.getElementById("signup").addEventListener('click', function(e) {
+                    e.preventDefault();
+                    let pass= document.getElementById('cancel').value;
+                    location.href = "homepage.html";
+                });
+
+            </script>
         </div>
     </div>
 </form>

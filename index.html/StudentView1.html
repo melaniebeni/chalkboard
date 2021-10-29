@@ -6,13 +6,13 @@
 
 </head>
 <body>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="courseview">
 <div class="home">
-<div class="logo">
-    <img src=".jpg" alt="Logo" >
-</div>
+    <a href="homepage.html">Logout</a>
+    <div class="Logo">
+            <img  alt="logo" src="Logo.jpeg" width="900" height="300">
+    </div>
 <div class="info">
     <p>this is the student page for </p>
     <!-- student info  -->
@@ -23,11 +23,14 @@
 
     <input type="Class" name="search" id="search" placeholder="Search">
 </div>
+    <div class="search" id="searchbtn">
+        <button type="button" onclick=>Search</button>
+    </div>
 <div class="searchresult">
     <!-- search results -->
         <ul>
-            <li><a href="StudentCurrentCourseView.html">English</a></li>
-            <li><a href="#">Link 2</a></li>
+            <li><a href="StudentCurrentCourseView.html">Math 123</a></li>
+            <li><a href="StudentCurrentCourseView.html">Math 101</a></li>
         </ul>
 
 </div>
@@ -36,7 +39,24 @@
 
 </div>
 <div class="Assignments">
-
+    <p><b>Due Soon:</b></p>
+    <table>
+        <tr>
+            <th>Assignment</th>
+            <th>Course</th>
+            <th>Due</th>
+        </tr>
+        <tr>
+            <td><a href="StudentAssignView.html">Assignment 1</a></td>
+            <td>Math 123 </td>
+            <td>Oct 27</td>
+        </tr>
+        <tr>
+            <td><a href="StudentAssignView.html">Assignment 2</a></td>
+            <td>Math 101</td>
+            <td>Nov 1</td>
+        </tr>
+        </table>
 </div>
 </body>
 </html>
