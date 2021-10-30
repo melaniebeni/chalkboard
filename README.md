@@ -3,6 +3,10 @@ Kings College distance learning course management website.
 
 Created by: Melanie Beni
 Link: https://melaniebeni.github.io/chalkboard/
+Student login: User: student Pass: student
+Instructor login: User: instructor Pass: instructor
+Admin login: User: admin Pass: admin
+
 ### Sitemap
 ![alt text](ReadMeImages/Sitemap.jpg)
 
