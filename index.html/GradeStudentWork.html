@@ -5,28 +5,45 @@
     <title>View/Grade Student Work</title>
 </head>
 <body>
+<div class="instructorCourseView">
+    <div class="nav" id="devnav">
+        <a href="StudentView1.html">Home</a>
+        <a href="GradeStudentWork.html">Clear</a>
+        <a href="homepage.html">Logout</a>
+    </div>
 <label for="students">Choose a Student:</label>
 
 <select name="student" id="students">
-    <option value="Sam ">Volvo</option>
-    <option value="saab">Saab</option>
-    <option value="mercedes">Mercedes</option>
-    <option value="audi">Audi</option>
+    <option value="Ashly">Ashly</option>
+    <option value="Marcus">Marcus</option>
+    <option value="June">June</option>
+    <option value="Tom">Tom</option>
 </select>
 <select name="Versions" id="version">
-    <option value="Sam ">Volvo</option>
-    <option value="saab">Saab</option>
-    <option value="mercedes">Mercedes</option>
-    <option value="audi">Audi</option>
+    <option value="version1">Version 1</option>
+    <option value="version2">Version 2</option>
+    <option value="version3">Version 3</option>
+    <option value="version4">Version 4</option>
 </select>
+    <form action="/action_page.php">
+        <label for="quantity">Grade:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="100">
+        <input type="submit">
+    </form>
+<div class="q1">
+<p>How do you find the circumference of a circle?</p>
+<input type="checkbox" id="Q1" name="ans" value="Answer">
+    <!--Answer shows only if student is chosen else blank-->
+<label for="Q1"> Student Answer</label><br>
+</div>
+<div class="q1">
+    <p>What is the area of a circle with a radius of 3 cm?</p>
+    <input type="checkbox" id="Q2" name="ans" value="Answer">
+    <label for="Q1"> Student Answer</label><br>
+</div>
+    <!-- Answers -->
+    <p>---Instructor Answers---</p>
+</div>
 
-<input type="checkbox" id="Q1" name="vehicle1" value="Bike">
-<label for="Q1"> I have a bike</label><br>
-
-<input type="checkbox" id="Q2" name="vehicle2" value="Car">
-<label for="Q2"> I have a car</label><br>
-<input type="checkbox" id="Q3" name="vehicle3" value="Boat">
-<label for="Q3"> I have a boat</label><br>
- <!-- Answers -->
 </body>
 </html>

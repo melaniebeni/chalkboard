@@ -6,7 +6,9 @@
 </head>
 <body>
 <div class="newcourse">
-<a href="homepage.html">Logout</a>
+    <div class="search" id="logoutbtn">
+        <button type="button" onclick=>Logout</button>
+    </div>
     <p>Create a new course that will be available for students to enroll in, ensure all sections with * are completed for course to be listed! </p>
 <div class="create">
     <form id="cc" method="get" action="login.php">
@@ -52,14 +54,32 @@
     </div>
     <br><br>
     <div class="search" id="lessonbtn">
-         <button type="button" onclick=>Add </button>
+         <button type="button" onclick=>Add Another</button>
+    </div>
+    <div class="answers">
+        <label for="ans"><b>Answers</b></label>
+        <input type="file" id="ans" name="ans" accept="image/*">
+    <br><br>
     </div>
 </form>
 </div>
-<!-- after add lesson is clicked filled data will be added to database and text box will be emptied for another to be added-->
-<div class="search" id="searchbtn">
+<div class="search" id="createbtn">
     <button type="button" onclick=>Create Course</button>
 </div>
+    <div class="search" id="cancelbtn">
+        <button type="button" onclick=>Cancel</button>
+    </div>
+    <script>
+        document.getElementById("logoutbtn").onclick = function () {
+            location.href = "homepage.html";
+        };
+        document.getElementById("createbtn").onclick = function () {
+            location.href = "InstructorCourseView.html";
+        };
+        document.getElementById("cancelbtn").onclick = function () {
+            location.href = "InstructorCourseView.html";
+        };
+    </script>
 </div>
 </body>
 </html>

@@ -5,30 +5,16 @@
     <title>Admin</title>
 </head>
 <body>
-<div class="nav" id="devnav">
-    <a href="StudentView1.html">Home</a>
-    <div class="dropdown">
-        <!-- Not including completed or current -->
-        <button class="dropbutton">Lessons</button>
-        <div class="dropdown-content">
-            <a href="">Lesson3</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <!-- Not including completed or current -->
-        <button class="dropbutton">Assignments</button>
-        <div class="dropdown-content">
-            <a href="">Assignment 3</a>
-        </div>
-    </div>
-    <a href="homepage.html">Logout</a>
-</div>
+<div class="logout" id="logoutbtn">
+    <button type="button" onclick=>Logout</button>
 </div>
 <div class="classsearch">
     <!-- class search  -->
     <p>Search for  </p>
-
-    <input type="Class" name="search" id="search" placeholder="Search">
+    <input type="class" name="search" id="search" placeholder="Search">
+</div>
+<div class="search" id="searchbtn">
+    <button type="button" onclick=>Search</button>
 </div>
 <div class="Professors">
     <table>
@@ -75,5 +61,11 @@
             </td>
         </tr>
     </table>
+    </div>
+<script>
+    document.getElementById("logoutbtn").onclick = function () {
+        location.href = "homepage.html";
+    };
+</script>
 </body>
 </html>
