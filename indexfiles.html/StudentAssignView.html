@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment</title>
+</head>
+<body>
+<div class="assign">
+<div class="nav" id="devnav">
+  <a href="StudentView1.html">Home</a>
+  <div class="dropdown">
+    <!-- Not including completed or current -->
+    <button class="dropbutton">Assignments</button>
+    <div class="dropdown-content">
+      <a href="StudentAssignView.html">Assignment 3</a>
+    </div>
+  </div>
+  <a href="StudentCurrentCourseView.html">Course Home</a>
+    </div>
+  <div class="grade">
+    <p><b>Grade:</b> 90%</p>
+    <div class="instructions">
+  <p>Read chapter 7 on circles and answer the following questions show all work.</p>
+  </div>
+  <form id="login" method="get" action="login.php">
+    <!--Question 1 -->
+    <label><b>Question 1</b></label>
+    <p>How do you find the circumference of a circle?</p>
+    <input type="text" name="Q1" id="Q1" placeholder="Question 1">
+    <input type="file" id="img1" name="img" accept="image/*">
+    <br><br>
+    <!--Question 1 -->
+    <label><b>Question 2</b></label>
+    <p>What is the area of a circle with a radius of 3 cm?</p>
+    <input type="text" name="Q2" id="Q2" placeholder="Question 2">
+    <input type="file" id="img2" name="img" accept="image/*">
+    <br><br>
+    <div class="Submit" id="submit">
+      <button type="button" onclick=>Submit</button>
+    </div>
+    <div class="draft" id="Draft">
+      <button type="button" onclick=>Save Draft</button>
+    </div>
+    <script>
+      document.getElementById("submit").onclick = function () {
+        location.href = "StudentCurrentCourseView.html";
+      };
+      document.getElementById("draft").onclick = function () {
+        location.href = "StudentCurrentCourseView.html";
+      };
+    </script>
+  </form>
+  <div class="comments">
+    <p><b>Instructor Comments:</b> comment</p> <!--hidden if none-->
+  </div>
+</div>
+</div>
+</body>
+</html>

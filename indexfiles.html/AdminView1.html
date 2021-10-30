@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+</head>
+<body>
+<div class="logout" id="logoutbtn">
+    <button type="button" onclick=>Logout</button>
+</div>
+<div class="classsearch">
+    <!-- class search  -->
+    <p>Search for  </p>
+    <input type="class" name="search" id="search" placeholder="Search">
+</div>
+<div class="search" id="searchbtn">
+    <button type="button" onclick=>Search</button>
+</div>
+<div class="Professors">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Courses</th>
+        </tr>
+        <tr>
+            <td>234532</td>
+            <td><a href="AdminView2.html">Jenny Smith</a></td>
+            <td>Math 101 <br><br>
+                Math 102
+            </td>
+        </tr>
+        <tr>
+            <td>234456</td>
+            <td><a href="AdminView2.html">Jane Doe</a></td>
+            <td>Math 143 <br><br>
+                Math 165
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="Students">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Courses</th>
+        </tr>
+        <tr>
+            <td>234532</td>
+            <td><a href="AdminView2.html">Frank Thompson</a></td>
+            <td>Math 101 <br><br>
+                Math 102
+            </td>
+        </tr>
+        <tr>
+            <td>234532</td>
+            <td><a href="AdminView2.html">Jennifer Sully</a></td>
+            <td>Math 101 <br><br>
+                Math 102
+            </td>
+        </tr>
+    </table>
+    </div>
+<script>
+    document.getElementById("logoutbtn").onclick = function () {
+        location.href = "homepage.html";
+    };
+</script>
+</body>
+</html>

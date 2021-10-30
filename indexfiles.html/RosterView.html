@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Roster</title>
+
+</head>
+<body>
+<div class="nav" id="devnav">
+    <a href="AdminView1.html">Home</a>
+    <a href="homepage.html">Logout</a>
+</div>
+<h2>Math</h2>
+<table>
+    <tr>
+        <th>Student ID</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Status</th>
+    </tr>
+    <tr>
+        <td>12345</td>
+        <td>Jenny </td>
+        <td>Smith</td>
+        <td>Enrolled</td>
+    </tr>
+    <tr>
+        <td>56789</td>
+        <td>Jessie</td>
+        <td>Jones</td>
+        <td>Enrolled</td>
+    </tr>
+</table>
+<h4>Pending Students</h4>
+<table>
+    <tr>
+        <th>Student ID</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Accept/Deny</th>
+    </tr>
+    <tr>
+        <td>12895</td>
+        <td>Carrie </td>
+        <td>Shaw</td>
+        <td><div class="add" id="add">
+            <button type="button" onclick=>Accept</button>
+        </div>
+        <div class="delete" id="delete">
+            <button type="button" onclick=>Deny</button>
+        </div>
+        </td>
+    </tr>
+</table>
+<script>
+    document.getElementById("add").onclick = function () {
+        //adds student to roster/db shows course
+    };
+    document.getElementById("addLessons").onclick = function () {
+        //student gets message saying class request denyed
+    };
+
+</script>
+</body>
+</html>

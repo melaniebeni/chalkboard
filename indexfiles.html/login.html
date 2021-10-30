@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chalkboard</title>
+</head>
+<body>
+<h2>Chalkboard Login</h2><br>
+<div class="login">
+    <form id="login" method="get" action="login.php">
+        <label><b>User Name</b></label>
+        <br><br>
+        <input type="text" name="Username" id="Username" placeholder="Username">
+        <br><br>
+        <label><b>Password</b></label>
+        <br><br>
+        <input type="Password" name="Pass" id="Pass" placeholder="Password">
+        <br><br>
+        <button id="myButton" class="submitbtn" onclick="myFunction()">Login</button>
+        <br><br>
+        <!--if email ends in a student/instructor/admin goes to that -->
+        <script>
+
+            document.getElementById("myButton").addEventListener('click', function(e) {
+                e.preventDefault();
+                let ans= document.getElementById('Username').value;
+                let pass= document.getElementById('Pass').value;
+             if( ans === "student" && pass==="student"){
+                location.href = "StudentView1.html";
+              }
+               else if( ans === "instructor" && pass==="instructor"){
+                    location.href = "InstructorView1.html";
+                }
+             else if( ans === "admin" && pass==="admin"){
+                 location.href = "AdminView1.html";
+             }
+            });
+
+        </script>
+    </form>
+</div>
+</body>
+</html>

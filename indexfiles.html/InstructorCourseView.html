@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math</title>
+</head>
+<body>
+<div class="instructorCourseView">
+<div class="nav" id="devnav">
+    <a href="StudentView1.html">Home</a>
+    <div class="dropdown">
+        <!-- Not including completed or current -->
+        <button class="dropbutton">Lessons</button>
+        <div class="dropdown-content">
+            <a href="">Lesson3</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <!-- Not including completed or current -->
+        <button class="dropbutton">Assignments</button>
+        <div class="dropdown-content">
+            <a href="">Assignment 3</a>
+        </div>
+    </div>
+    <a href="homepage.html">Logout</a>
+</div>
+
+<div class="icview">
+<h1>Math </h1>
+    <div class="courseimg">
+        <a href="math.jpeg">
+            <img  alt="courseimg" src="math.jpeg" width="900" height="300">
+        </a>
+    </div>
+</div>
+    <div class="search" id="pending">
+        <button type="button" onclick=>Students Pending</button>
+    </div>
+<div class="materials"><p><b>Materials</b><br><br>Thomas M. Connolly, Database Systems: A Practical Approach to Design, Implementation and Management, Sixth Edition, Addison-Wesley, 2014. ISBN 978-0132943260</p></div>
+<form action="//www.html.am/html-codes/forms/html-form-tag-action.cfm" target="result2" method="get">
+    <p><b>Lessons</b></p>
+    <select name="lesson" multiple>
+        <option value ="lesson1">Lesson 1</option>
+        <option value ="lesson2">Lesson 2</option>
+        <option value ="lesson3">Lesson 3</option>
+        <option value ="lesson4">Lesson 4</option>
+        <option value ="lesson5">Lesson 5</option>
+    </select>
+    <div class="lessons" id="Lessons">
+        <button type="button" onclick=>View/Grade Assignment</button>
+    </div>
+    <div class="addlessons" id="addLessons">
+        <button type="button" onclick=>Add</button>
+    </div>
+</form>
+<script>
+        document.getElementById("Lessons").onclick = function () {
+            location.href = "GradeStudentWork.html";
+        };
+        document.getElementById("addLessons").onclick = function () {
+            location.href = "InstructorNewEditCourseView.html";
+        };
+        document.getElementById("pending").onclick = function () {
+            location.href = "RosterView.html";
+        };
+</script>
+</div>
+</body>
+</html>
