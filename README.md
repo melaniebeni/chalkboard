@@ -11,11 +11,6 @@ All users must log in with their email and password to gain access to appropriat
 
 ![alt text](ReadMeImages/HomeLogin.jpg)
 
-### New User
-New users can create an account by providing the correct imformation.
-
-![alt text](ReadMeImages/SignUp.jpg)
-
 ### Student View
 This website will allow students to add courses with instructor permission then after be able to view and complete assignments for that course to be graded by the instructor.
 
