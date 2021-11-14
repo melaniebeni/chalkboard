@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <!--Course Name-->
     <title>Math 120-34</title>
+    <link rel="stylesheet" href="https://melaniebeni.github.io/chalkboard/CSS/studentcurrentcourseview.css">
 </head>
 <body>
 <div>
-    <a href="https://melaniebeni.github.io/chalkboard/html.html/StudentView1.html">Home</a>
-    <a href="https://melaniebeni.github.io/chalkboard/index.html">Logout</a>
+    <div id="top">
+    <div  id="home">
+        <button type="button" > Home</button>
+    </div>
+    <div class="logout" id="loButton">
+        <button type="button" >Logout</button>
+    </div>
+        </div>
 <!--Based on course-->
 <div class="courseimg">
     <a href="math.jpeg">
-        <img  alt="courseimg" src="math.jpeg" width="900" height="300">
+        <img  alt="courseimg" src="math.jpeg" width="800" height="300">
     </a>
 </div>
     <!--Can be changed by instructor-->
@@ -30,7 +37,7 @@
             <option value ="assign5">Assignment 5</option>
         </select>
         <div class="lessons" id="Lessons">
-            <button type="button" onclick=>View Assignment</button>
+            <button type="button" >View Assignment</button>
         </div>
     </form>
     <!--Shows status if ungraded allows for editing-->
@@ -45,9 +52,9 @@
             <tr>
                 <td>Assignment 1</td>
                 <td>Oct 27 </td>
-                <td><div class="edit" id="editbtn">
-                    <button type="button" onclick=>Edit</button>
-                </div></td>
+                <td>
+                    <div class="edit" > <a href="https://melaniebeni.github.io/chalkboard/html.html/StudentAssignView.html">EDIT</a></div>
+                </td>
             </tr>
             <tr>
                 <td>Assignment 2</td>
@@ -81,8 +88,11 @@
         document.getElementById("Lessons").onclick = function () {
             location.href = "https://melaniebeni.github.io/chalkboard/html.html/StudentAssignView.html";
         };
-        document.getElementById("editbtn").onclick = function () {
-            location.href = "https://melaniebeni.github.io/chalkboard/html.html/StudentAssignView.html";
+        document.getElementById("home").onclick = function () {
+            location.href = "https://melaniebeni.github.io/chalkboard/html.html/StudentView1.html";
+        };
+        document.getElementById("loButton").onclick = function () {
+            location.href = "https://melaniebeni.github.io/chalkboard/index.html";
         };
     </script>
 </div>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Roster</title>
+    <link rel="stylesheet" href="https://melaniebeni.github.io/chalkboard/CSS/rosterview.css">
 
 </head>
 <body>
@@ -11,6 +12,27 @@
     <a href="https://melaniebeni.github.io/chalkboard/index.html">Logout</a>
 </div>
 <h2>Math</h2>
+<h4>Pending Students</h4>
+<table>
+    <tr>
+        <th>Student ID</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Accept/Deny</th>
+    </tr>
+    <tr>
+        <td>12895</td>
+        <td>Carrie </td>
+        <td>Shaw</td>
+        <td><div class="add" id="add">
+            <button type="button" onclick=>Accept</button>
+        </div>
+            <div class="delete" id="delete">
+                <button type="button" onclick=>Deny</button>
+            </div>
+        </td>
+    </tr>
+</table>
 <table>
     <tr>
         <th>Student ID</th>
@@ -31,27 +53,7 @@
         <td>Enrolled</td>
     </tr>
 </table>
-<h4>Pending Students</h4>
-<table>
-    <tr>
-        <th>Student ID</th>
-        <th>First</th>
-        <th>Last</th>
-        <th>Accept/Deny</th>
-    </tr>
-    <tr>
-        <td>12895</td>
-        <td>Carrie </td>
-        <td>Shaw</td>
-        <td><div class="add" id="add">
-            <button type="button" onclick=>Accept</button>
-        </div>
-        <div class="delete" id="delete">
-            <button type="button" onclick=>Deny</button>
-        </div>
-        </td>
-    </tr>
-</table>
+
 <script>
     document.getElementById("add").onclick = function () {
         //adds student to roster/db shows course

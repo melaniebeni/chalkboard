@@ -1,0 +1,57 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #23463f;
+
+}
+.login{
+    width: 382px;
+    overflow: hidden;
+    margin: auto;
+    padding: 30px;
+
+    border-radius: 15px ;
+
+}
+h2{
+    text-align: center;
+    color: white;
+    padding: 5px;
+    font-size: 50px;
+}
+label{
+    color: whitesmoke;
+    font-size: 17px;
+
+}
+#Username{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+#Pass{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+
+}
+
+
+#myButton{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+
+    color: white;
+
+}
+p{
+    color:white;
+}

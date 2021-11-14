@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Student Page</title>
-
+    <link rel="stylesheet" href="https://melaniebeni.github.io/chalkboard/CSS/studentview1.css">
 </head>
 <body>
 
 <div class="courseview">
-<div class="home">
-    <a href="https://melaniebeni.github.io/chalkboard/index.html">Logout</a>
-    <div class="Logo">
-            <img  alt="logo" src="Logo.jpeg" width="900" height="300">
+    <div class="logout" id="loButton">
+        <button type="button" onclick=> Logout</button>
     </div>
-<div class="info">
-    <p>this is the student page for </p>
-    <!-- student info  -->
-</div>
-<div class="classsearch">
-    <!-- class search  -->
-    <p>Search for  </p>
+    <div class="home">
+        <div class="Logo">
+            <img  alt="logo" src="Logo.jpeg" width="700" height="300">
+        </div>
+        <div class="info">
+            <p>This is the Kings College student page.</p>
+            <!-- student info  -->
+        </div>
+        <div class="classsearch">
+            <!-- class search  -->
+            <p>Search for classes by entering the id, class name, or instructor.</p>
 
-    <input type="class" name="search" id="search" placeholder="Search">
-</div>
-    <div class="search" id="searchbtn">
-        <button type="button" onclick=>Search</button>
+            <input type="search" name="search" id="search" placeholder="Search">
+            <button type="button"> Search</button>
+
+        </div>
+        <div class="searchresult">
+            <!-- search results -->
+            <ul>
+                <li><a href="https://melaniebeni.github.io/chalkboard/html.html/StudentCurrentCourseView.html">Math 123</a></li>
+                <li><a href="https://melaniebeni.github.io/chalkboard/html.html/StudentCurrentCourseView.html">Math 101</a></li>
+            </ul>
+
+        </div>
     </div>
-<div class="searchresult">
-    <!-- search results -->
-        <ul>
-            <li><a href="https://melaniebeni.github.io/chalkboard/html.html/StudentCurrentCourseView.html">Math 123</a></li>
-            <li><a href="https://melaniebeni.github.io/chalkboard/html.html/StudentCurrentCourseView.html">Math 101</a></li>
-        </ul>
-
-</div>
-</div>
 
 
 </div>
@@ -56,7 +57,12 @@
             <td>Math 101</td>
             <td>Nov 1</td>
         </tr>
-        </table>
+    </table>
+    <script type="text/javascript">
+    document.getElementById("loButton").onclick = function () {
+    location.href = "https://melaniebeni.github.io/chalkboard/index.html";
+    };
+    </script>
 </div>
 </body>
 </html>

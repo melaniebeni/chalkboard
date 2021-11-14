@@ -1,0 +1,72 @@
+input[type="search"]
+{
+    font-size: 20px;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+body{
+    text-align:center;
+    margin: auto;
+    display: block;
+}
+.info{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 25px;
+    color: #000000;
+    text-align:center;
+    margin: auto;
+    display: block;
+}
+#logo{
+    width: 400px;
+    height: 300px;
+    position: relative;
+
+}
+select {
+    appearance: none;
+    background-color: transparent;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 200px;
+    height: 250px;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+
+}
+button{
+    border-radius: 17px;
+    background-color: #23463f;
+    color: white;
+    padding: 7px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+
+}
+
+#search{
+    border: 3px solid #00B4CC;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 5px 5px 5px;
+    outline: none;
+    color: #9DBFAF;
+    width: 200px;
+
+}
+
+
+#search:focus{
+    color: #00B4CC;
+}
+
+
+
+

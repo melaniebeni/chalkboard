@@ -10,6 +10,19 @@ Instructor login: User: instructor Pass: instructor
 
 Admin login: User: admin Pass: admin
 
+List of features:
+- Login/ Signup
+- Student
+- 1. Adding/Viewing courses
+- 2. Completeing assignments
+- Professor
+- 1. Creating/Editing/Viewing courses and assignments
+- 2. Grading Assignments
+- 3. Accepting/Denying students into courses
+- 4. View roster
+- Admin
+- 1. View of all students, instructors, and their information
+
 ### Sitemap
 ![alt text](ReadMeImages/Sitemap.jpg)
 

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Chalkboard</title>
+    <link rel="stylesheet" href="https://melaniebeni.github.io/chalkboard/CSS/Login.css">
 </head>
 <body>
 <h2>Chalkboard Login</h2><br>
@@ -19,8 +20,8 @@
         <button id="myButton" class="submitbtn" onclick="myFunction()">Login</button>
         <br><br>
         <!--if email ends in a student/instructor/admin goes to that -->
+        <p>New to Chalkboard?<a href="https://melaniebeni.github.io/chalkboard/html.html/NewUser.html" style="color:dodgerblue"> Sign Up Here</a>.</p>
         <script>
-
             document.getElementById("myButton").addEventListener('click', function(e) {
                 e.preventDefault();
                 let ans= document.getElementById('Username').value;

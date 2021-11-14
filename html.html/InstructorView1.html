@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Instructor Page</title>
+    <link rel="stylesheet" href="https://melaniebeni.github.io/chalkboard/CSS/instructorView1.css">
 
 </head>
 <body>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="Instructor">
-    <a href="https://melaniebeni.github.io/chalkboard/index.html">Logout</a>
+    <div class="logout" id="loButton">
+        <button type="button" onclick=> Logout</button>
+    </div>
     <div class="Logo">
-        <img  alt="logo" src="Logo.jpeg" width="900" height="300">
+        <img  alt="logo" src="Logo.jpeg" width="400px" height="300px">
     </div>
     <div class="info">
         <p><b>Professor Jane Stern</b> <br>
@@ -30,12 +33,13 @@
         <input type="class" name="search" id="search" placeholder="Search">
 
         <button id="searchButton" class="search" onclick="sFunction()">Search</button>
+    </div>
     <div class="searchresults">
         <ul>
             <li><a href="https://melaniebeni.github.io/chalkboard/html.html/InstructorCourseView.html">Math</a></li>
             <li><a href="https://melaniebeni.github.io/chalkboard/html.html/InstructorCourseView.html">Search Result 2</a></li>
         </ul>
-    </div>
+
     </div>
 
     <div class="currentcourses">
@@ -72,6 +76,9 @@
        document.getElementById("newButton").onclick = function () {
            location.href = "https://melaniebeni.github.io/chalkboard/html.html/InstructorNewEditCourseView.html";
        };
+      document.getElementById("loButton").onclick = function () {
+        location.href = "https://melaniebeni.github.io/chalkboard/index.html";
+    };
        document.getElementById("rosterButton").onclick = function () {
            location.href = "https://melaniebeni.github.io/chalkboard/html.html/RosterView.html";
        };

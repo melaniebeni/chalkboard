@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>View/Grade Student Work</title>
+    <link rel="stylesheet" href="https://melaniebeni.github.io/chalkboard/CSS/GradeStudentWork.css">
 </head>
 <body>
 <div class="instructorCourseView">
@@ -11,20 +12,22 @@
         <a href="https://melaniebeni.github.io/chalkboard/html.html/GradeStudentWork.html">Clear</a>
         <a href="https://melaniebeni.github.io/chalkboard/index.html">Logout</a>
     </div>
+
 <label for="students">Choose a Student:</label>
 
-<select name="student" id="students">
+<select name="student" id="select-dropdown">
     <option value="Ashly">Ashly</option>
     <option value="Marcus">Marcus</option>
     <option value="June">June</option>
     <option value="Tom">Tom</option>
 </select>
-<select name="Versions" id="version">
+<select name="Versions" id="select-dropdown">
     <option value="version1">Version 1</option>
     <option value="version2">Version 2</option>
     <option value="version3">Version 3</option>
     <option value="version4">Version 4</option>
 </select>
+
     <form action="/action_page.php">
         <label for="quantity">Grade:</label>
         <input type="number" id="quantity" name="quantity" min="1" max="100">
@@ -35,12 +38,17 @@
 <input type="checkbox" id="Q1" name="ans" value="Answer">
     <!--Answer shows only if student is chosen else blank-->
 <label for="Q1"> Student Answer</label><br>
+
 </div>
-<div class="q1">
+<div class="q2">
     <p>What is the area of a circle with a radius of 3 cm?</p>
     <input type="checkbox" id="Q2" name="ans" value="Answer">
-    <label for="Q1"> Student Answer</label><br>
+    <label for="Q2"> Student Answer</label><br> <br>
+
 </div>
+    <label for="Q1com"> Comments: </label><br>
+    <textarea cols="50" rows="5"></textarea>
+
     <!-- Answers -->
     <p>---Instructor Answers---</p>
 </div>

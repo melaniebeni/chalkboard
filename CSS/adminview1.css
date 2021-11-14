@@ -1,0 +1,62 @@
+button{
+    border-radius: 17px;
+    background-color: #23463f;
+    color: white;
+    padding: 7px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+
+}
+.Students  {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.Professors {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, #customers th {
+    border: 2px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(even){
+    background-color:#f2f2f2;
+
+}
+
+tr:hover {background-color: #ddd}
+
+th {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    text-align: center;
+    background-color: #23463f;
+    color: white;
+}
+#search{
+    border: 3px solid #00B4CC;
+    padding: 5px;
+
+    border-radius: 5px 5px 5px 5px;
+    outline: none;
+    color: #9DBFAF;
+    width: 225px;
+
+}
+#search:focus{
+    color: #00B4CC;
+}
+
+p{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 20px;
+    color: #000000;
+    margin: auto;
+    display: block;
+}
