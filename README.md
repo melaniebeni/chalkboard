@@ -12,16 +12,27 @@ Admin login: User: admin Pass: admin
 
 List of features:
 - Login/ Signup
+  https://melaniebeni.github.io/chalkboard/html.html/Login.html
+  https://melaniebeni.github.io/chalkboard/html.html/NewUser.html
 - Student
 - 1. Adding/Viewing courses
+     https://melaniebeni.github.io/chalkboard/html.html/StudentView1.html
 - 2. Completeing assignments
+     https://melaniebeni.github.io/chalkboard/html.html/StudentCurrentCourseView.html
 - Professor
 - 1. Creating/Editing/Viewing courses and assignments
+     https://melaniebeni.github.io/chalkboard/html.html/InstructorView1.html
+     https://melaniebeni.github.io/chalkboard/html.html/InstructorNewEditCourseView.html
+     https://melaniebeni.github.io/chalkboard/html.html/InstructorCourseView.html
 - 2. Grading Assignments
+     https://melaniebeni.github.io/chalkboard/html.html/GradeStudentWork.html
 - 3. Accepting/Denying students into courses
+     https://melaniebeni.github.io/chalkboard/html.html/RosterView.html
 - 4. View roster
+     https://melaniebeni.github.io/chalkboard/html.html/RosterView.html
 - Admin
 - 1. View of all students, instructors, and their information
+     https://melaniebeni.github.io/chalkboard/html.html/AdminView1.html
 
 ### Sitemap
 ![alt text](ReadMeImages/Sitemap.jpg)
