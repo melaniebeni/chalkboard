@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui">
     <title>Instructor Page</title>
     <link rel="stylesheet" href="https://melaniebeni.github.io/chalkboard/CSS/instructorView1.css">
 
@@ -11,10 +12,10 @@
 
 <div class="Instructor">
     <div class="logout" id="loButton">
-        <button type="button" onclick=> Logout</button>
+        <button type="button" > Logout</button>
     </div>
     <div class="Logo">
-        <img  alt="logo" src="Logo.jpeg" width="400px" height="300px">
+        <img  alt="logo" src="Logo.jpeg" width="400" height="300">
     </div>
     <div class="info">
         <p><b>Professor Jane Stern</b> <br>
@@ -30,7 +31,7 @@
         <p>Search for classes by entering the id, class name, or instructor. </p>
         <button id="newButton" class="new" onclick="myFunction()">New</button>
 
-        <input type="class" name="search" id="search" placeholder="Search">
+        <input  name="search" id="search" placeholder="Search">
 
         <button id="searchButton" class="search" onclick="sFunction()">Search</button>
     </div>
@@ -54,18 +55,18 @@
             <option value ="bio">Biology</option>
         </select>
         <div class="search" id="rosterButton">
-            <button type="button" onclick=> Roster</button>
+            <button type="button" > Roster</button>
         </div>
         <div class="search" id="ViewButton">
-            <button type="button" onclick=> View </button>
+            <button type="button" > View </button>
         </div>
         <div class="search" id="editButton">
-            <button type="button" onclick=> Edit</button>
+            <button type="button" > Edit</button>
         </div>
 
     </form>
     </div>
-<script type="text/javascript">
+<script >
     function sFunction() {
         var x = document.getElementById("searchButton").value;
         document.getElementById("searchresults").innerHTML = x;
