@@ -67,6 +67,19 @@ button{
     color: #00B4CC;
 }
 
+@media screen and (max-width: 767px) {
+    button {
+        width:auto;
+    }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    * {
+        width:max-content;
 
+    }
+    button {
+        width:auto;
+    }
+}
 
 

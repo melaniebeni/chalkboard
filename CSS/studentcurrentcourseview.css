@@ -59,3 +59,22 @@ a {
     color: red;
     text-transform: uppercase;
 }
+@media screen and (max-width: 767px) {
+    button {
+        width:auto;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    * {
+        width:max-content;
+
+    }
+    button {
+        width:auto;
+    }
+
+}

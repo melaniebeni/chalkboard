@@ -77,6 +77,7 @@ p{
     font-size: 25px;
 }
 img{
+
     width: 900px;
     height: 300px;
     position: relative;
@@ -96,4 +97,23 @@ button:not(.dropbutton) {
 }
 h1{
     text-align: center;
-}}
+}
+@media screen and (max-width: 360px) {
+    button:not(.dropbutton) {
+        width:auto;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    * {
+        width:auto;
+
+    }
+    button:not(.dropbutton) {
+        width:auto;
+    }
+
+}

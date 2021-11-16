@@ -60,3 +60,17 @@ p{
     margin: auto;
     display: block;
 }
+@media screen and (max-width: 767px) {
+    button {
+        width:auto;
+    }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    * {
+        width:-webkit-fill-available;
+
+    }
+    button {
+        width:auto;
+    }
+}
