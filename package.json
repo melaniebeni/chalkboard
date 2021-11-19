@@ -1,0 +1,24 @@
+{
+  "name": "chalkboard",
+  "version": "1.0.0",
+  "description": "Kings College distance learning course management website.",
+  "main": "chalkboard.js",
+  "scripts": {
+    "start": "node chalkboard.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melaniebeni/chalkboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melaniebeni/chalkboard/issues"
+  },
+  "homepage": "https://github.com/melaniebeni/chalkboard#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
