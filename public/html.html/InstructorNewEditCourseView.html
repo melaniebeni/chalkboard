@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui">
     <title>Create/Edit Course</title>
-    <link rel="stylesheet" href="https://melaniebeni.github.io/chalkboard/CSS/InstructorNewEditCourseView.css">
+    <link rel="stylesheet" href="/CSS/InstructorNewEditCourseView.css">
 </head>
 <body>
 <div class="newcourse">
@@ -13,7 +13,7 @@
     </div>
     <p>Create a new course that will be available for students to enroll in, ensure all sections with * are completed for course to be listed! </p>
 <div class="create">
-    <form id="cc" method="get" action="login.php">
+    <form action="/create" method="POST" >
     <div class="coursename">
         <label><b>Course Name*</b></label>
         <input type="text" name="name" id="cname" placeholder="Enter Here">
@@ -48,7 +48,7 @@
         <br><br>
     </div>
     <div class="Q1">
-        <label><b>Question 1</b></label>
+        <label><b>Question </b></label>
         <input type="text" name="search" id="q1" placeholder="Enter Here">
     </div>
     <div class="search" id="questionbtn">
@@ -63,23 +63,20 @@
         <input type="file" id="ans" name="ans" accept="image/*">
     <br><br>
     </div>
+    <input type="submit" value="Submit" >
+        <div class="buttons">
+            <button id="done" class="float-left submit-button" onclick="myFunction()">Done</button>
 </form>
-</div>
-<div class="search" id="createbtn">
-    <button type="button" >Create Course</button>
-</div>
-    <div class="search" id="cancelbtn">
-        <button type="button">Cancel</button>
-    </div>
+
     <script>
         document.getElementById("logoutbtn").onclick = function () {
-            location.href = "https://melaniebeni.github.io/chalkboard/index.html";
+            location.href = "/";
         };
         document.getElementById("createbtn").onclick = function () {
-            location.href = "https://melaniebeni.github.io/chalkboard/html.html/InstructorCourseView.html";
+            location.href = "InstructorCourseView.html";
         };
         document.getElementById("cancelbtn").onclick = function () {
-            location.href = "https://melaniebeni.github.io/chalkboard/html.html/InstructorCourseView.html";
+            location.href = "InstructorCourseView.html";
         };
     </script>
 </div>

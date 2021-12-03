@@ -4,27 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui">
     <title>Assignment</title>
-   <link rel="stylesheet" href="https://melaniebeni.github.io/chalkboard/CSS/studentassignmentview.css">
+   <link rel="stylesheet" href="/CSS/studentassignmentview.css">
 </head>
 <body>
 <div class="assign">
 <div class="nav" id="devnav">
-  <a href="https://melaniebeni.github.io/chalkboard/html.html/StudentView1.html">Home</a>
+  <a href="StudentView1.html">Home</a>
   <div class="dropdown">
     <!-- Not including completed or current -->
     <button class="dropbutton">Assignments</button>
     <div class="dropdown-content">
-      <a href="https://melaniebeni.github.io/chalkboard/html.html/StudentAssignView.html">Assignment 3</a>
+      <a href="StudentAssignView.html">Assignment 3</a>
     </div>
   </div>
-  <a href="https://melaniebeni.github.io/chalkboard/html.html/StudentCurrentCourseView.html">Course Home</a>
+  <a href="StudentCurrentCourseView.html">Course Home</a>
     </div>
   <div class="grade">
     <p><b>Grade:</b> 90%</p>
     <div class="instructions">
   <p>Read chapter 7 on circles and answer the following questions show all work.</p>
   </div>
-  <form id="login" method="get" action="login.php">
+  <form action="/StudentAssignView" method="get" action="login.php">
     <!--Question 1 -->
     <label><b>Question 1</b></label>
     <p>How do you find the circumference of a circle?</p>
@@ -45,10 +45,10 @@
     </div>
     <script>
       document.getElementById("submit").onclick = function () {
-        location.href = "https://melaniebeni.github.io/chalkboard/html.html/StudentCurrentCourseView.html";
+        location.href = "StudentCurrentCourseView.html";
       };
       document.getElementById("draft").onclick = function () {
-        location.href = "https://melaniebeni.github.io/chalkboard/html.html/StudentCurrentCourseView.html";
+        location.href = "StudentCurrentCourseView.html";
       };
     </script>
   </form>

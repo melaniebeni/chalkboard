@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui">
     <title>Chalkboard</title>
-    <link rel="stylesheet" href="https://melaniebeni.github.io/chalkboard/CSS/Login.css">
+    <link rel="stylesheet" href="/CSS/Login.css">
 </head>
 <body>
 <h2>Chalkboard Login</h2><br>
 <div class="login">
-    <form id="login" method="get" action="login.php">
+    <form action="/login" method="get" >
         <label><b>User Name</b></label>
         <br><br>
         <input type="text" name="Username" id="Username" placeholder="Username">
@@ -21,7 +21,7 @@
         <button id="myButton" class="submitbtn" onclick="myFunction()">Login</button>
         <br><br>
         <!--if email ends in a student/instructor/admin goes to that -->
-        <p>New to Chalkboard?<a href="https://melaniebeni.github.io/chalkboard/html.html/NewUser.html" style="color:dodgerblue"> Sign Up Here</a>.</p>
+        <p>New to Chalkboard?<a href="html.html/NewUser.html" style="color:dodgerblue"> Sign Up Here</a>.</p>
         <script>
             document.getElementById("myButton").addEventListener('click', function(e) {
                 e.preventDefault();
@@ -34,7 +34,7 @@
                     location.href = "InstructorView1.html";
                 }
              else if( ans === "admin" && pass==="admin"){
-                 location.href = "AdminView1.html";
+                 location.href = "/admin";
              }
             });
 
