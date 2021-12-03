@@ -71,8 +71,8 @@ db.collection("Courses").find({} , function (err, allDetails) {
         console.log(err);
     } else {
       console.log("1 document inserted");
-      res.send(allDetails.forEach(doc =>  print( doc.quality_level ) )); // checking contents of response
-      //res.render("AdminView1.ejs", { user: allDetails })
+      //res.send(allDetails.forEach(doc =>  print( doc.quality_level ) )); // checking contents of response
+      res.render("AdminView1.ejs", { user: allDetails })
     }
 }).toArray();
     });
