@@ -99,8 +99,6 @@ app.post("/create", function (req, res, next) {
       "lesson": lesson,
       "Q1": q1
     };
-    
-    if (err) throw err;
     db.collection("Courses").insertOne(course, function(err, collection) {
     if (err) throw err;
     console.log("1 document inserted");
@@ -111,17 +109,19 @@ app.post("/create", function (req, res, next) {
 app.get("/admin", function (req, res, ) {   
   db.collection("Students").find({}).toArray(function(err, result) {
     if (err) throw err;
-    //res.send(result);
-    //console.log(result);
-    res.render("AdminView1.ejs", { student: result })
-    }) 
+    //res.render("AdminView1.ejs", { student: result })
+    
     db.collection("Instructors").find({}).toArray(function(err, results) {
     if (err) throw err;
-    //res.send(result);
-    //console.log(result);
-   //res.render("AdminView1.ejs", { i: results })
+    db.collection("Courses").find({}).toArray(function(err, r) {
+    if (err) throw err;
+   res.render("AdminView1.ejs", { i: results, student:result, course:r})
     })
+   //res.render("AdminView1.ejs", { i: results, student:result})
+    })
+    }) 
 });
+
 app.get("/course", function (req, res, ) {   
   db.collection("Courses").find({}).toArray(function(err, result) {
     if (err) throw err;
@@ -132,69 +132,37 @@ app.get("/course", function (req, res, ) {
     
 });
 
-//Handling user login
 app.post("/login", function (req, res) {
     var e= req.body.email;
-    var passwd= req.body.pwd;
-    console.log(e);
-    var h=req.body;
-    
-  
+    var passwd= req.body.pwd; 
 db.collection("Students").findOne({email:e},{pwd: passwd},function (err, r) {
     if (err) throw err;
-    //res.send(result);
-    console.log(req.body);
     if(r){
-      console.log(r);
     res.render("StudentView1.ejs", { user: r })
-    //res.redirect("InstructorView1.ejs");
     }
-   // else{
-      //res.render("InstructorView1.ejs", { user: r })
-     
-    //}
 });
 db.collection("Instructors").findOne({email:e},{pwd: passwd},function (err, r) {
     if (err) throw err;
-    //res.send(result);
-    console.log(req.body);
     if(r){
-      console.log(r);
     res.render("InstructorView1.ejs", { user: r })
-    //res.redirect("InstructorView1.ejs");
     }
-   // else{
-      //res.render("InstructorView1.ejs", { user: r })
-     
-    //}
+   
 });
     db.collection("Admin").findOne({email:e},{pwd: passwd},function (err, r) {
     if (err) throw err;
-    //res.send(result);
-    console.log(req.body);
     if(r){
-      console.log(r);
     res.redirect("/admin")
-    //res.redirect("InstructorView1.ejs");
     }
-   // else{
-      //res.render("InstructorView1.ejs", { user: r })
-     
-    //}
+   
 });
  });
-//function isLoggedIn(req, res, next) {
- //   if (req.isAuthenticated()) return next();
- //   res.render("/InstructorView1");
-//}
+
 
 
 app.get("/search", function (req, res) {
     var search=req.body.search;
-    console.log();
 db.collection("Students").findOne({search} , function (err, resu) {
     if (err) throw err;
-    console.log(resu);
     res.render("AdminView1.ejs", { user: resu })
 });
 });

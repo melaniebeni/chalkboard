@@ -34,7 +34,52 @@
     </table>
     <% } %>
 </div>
-
+<p>Instructors/s<p>
+<div class="Instructors">
+  <% if(i!=null) {%>
+  <p><%=i.id%></p>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Courses</th>
+        </tr>
+       <% i.forEach(function(i){ %> 
+        <tr>
+            <td><%= i.id %></td>
+            <td><%= i.firstname%></a></td>
+            <td>Math 101 <br><br>
+                Math 102
+            </td>
+        </tr>
+        
+        <% }) %>
+    </table>
+    <% } %>
+</div>
+<p>Course/s<p>
+<div class="courses">
+  <% if(course!=null) {%>
+  <p><%=course.id_%></p>
+    <table>
+        <tr>
+            <th>Course Name</th>
+            <th>Description</th>
+            <th>Instructor</th>
+            <th>Materials</th>
+        </tr>
+       <% course.forEach(function(course){ %> 
+        <tr>
+            <td><%= course.coursename %></td>
+            <td><%= course.description%></a></td>
+            <td><%= course.instructor%></a></td>
+            <td><%= course.materials%></a></td>
+        </tr>
+        
+        <% }) %>
+    </table>
+    <% } %>
+</div>
 <script>
     document.getElementById("logoutbtn").onclick = function () {
         location.href = "/";

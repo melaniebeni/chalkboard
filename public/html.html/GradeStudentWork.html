@@ -9,8 +9,8 @@
 <body>
 <div class="instructorCourseView">
     <div class="nav" id="devnav">
-        <a href="html.html/StudentView1.html">Home</a>
-        <a href="html.html/GradeStudentWork.html">Clear</a>
+        <a href="StudentView1.ejs">Home</a>
+        <a href="GradeStudentWork.html">Clear</a>
         <a href="/">Logout</a>
     </div>
 
@@ -29,7 +29,7 @@
     <option value="version4">Version 4</option>
 </select>
 
-    <form action="/action_page.php">
+    <form action="/grade" method="POST">
         <label for="quantity">Grade:</label>
         <input type="number" id="quantity" name="quantity" min="1" max="100">
         <input type="submit">
