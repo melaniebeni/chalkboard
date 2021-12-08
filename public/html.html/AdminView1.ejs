@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,69 +10,31 @@
 <div class="logout" id="logoutbtn">
     <button type="button" >Logout</button>
 </div>
-<div class="classsearch">
-    <!-- class search  -->
-    <p>Search for  </p>
-    <input type="search" name="search" id="search" placeholder="Search">
-</div>
-<div class="search" id="searchbtn">
-    <button type="button" >Search</button>
-</div>
-<p>Professor/s<p>
-<div class="Professors">
-  <a href="/admin">Get Details</a>
-  <% if(user!=null) {%>
-  <p><%=user.id%></p>
-    <table>
 
+<p>Students/s<p>
+<div class="Students">
+  <% if(student!=null) {%>
+  <p><%=student.id%></p>
+    <table>
         <tr>
             <th>ID</th>
             <th>Name</th>
             <th>Courses</th>
         </tr>
-       <% user.forEach(function(user){ %> 
+       <% student.forEach(function(student){ %> 
         <tr>
-            <td><%= user.id %></td>
-            <td><a href="AdminView2.html"><%= user.firstname%></a></td>
+            <td><%= student.id %></td>
+            <td><%= student.firstname%></a></td>
             <td>Math 101 <br><br>
                 Math 102
             </td>
         </tr>
-        <tr>
-            <td>234456</td>
-            <td><a href="AdminView2.html">Jane Doe</a></td>
-            <td>Math 143 <br><br>
-                Math 165
-            </td>
-        </tr>
+        
         <% }) %>
     </table>
     <% } %>
 </div>
-<p>Student/s<p>
-<div class="Students">
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Courses</th>
-        </tr>
-        <tr>
-            <td>234532</td>
-            <td><a href="AdminView2.html">Frank Thompson</a></td>
-            <td>Math 101 <br><br>
-                Math 102
-            </td>
-        </tr>
-        <tr>
-            <td>234532</td>
-            <td><a href="AdminView2.html">Jennifer Sully</a></td>
-            <td>Math 101 <br><br>
-                Math 102
-            </td>
-        </tr>
-    </table>
-    </div>
+
 <script>
     document.getElementById("logoutbtn").onclick = function () {
         location.href = "/";

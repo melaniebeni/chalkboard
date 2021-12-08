@@ -25,14 +25,14 @@ label{
     font-size: 17px;
 
 }
-#Username{
+#email{
     width: 300px;
     height: 30px;
     border: none;
     border-radius: 3px;
     padding-left: 8px;
 }
-#Pass{
+#pwd{
     width: 300px;
     height: 30px;
     border: none;
@@ -42,7 +42,7 @@ label{
 }
 
 
-#myButton{
+input[type=submit]{
     width: 300px;
     height: 30px;
     border: none;

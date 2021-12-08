@@ -64,20 +64,21 @@
     <br><br>
     </div>
     <input type="submit" value="Submit" >
-        <div class="buttons">
-            <button id="done" class="float-left submit-button" onclick="myFunction()">Done</button>
+    <div class="buttons">
+            <button id="done"  onclick="myFunction()">Done</button>
+        </div>
 </form>
-
+        
     <script>
         document.getElementById("logoutbtn").onclick = function () {
             location.href = "/";
         };
-        document.getElementById("createbtn").onclick = function () {
-            location.href = "InstructorCourseView.html";
-        };
-        document.getElementById("cancelbtn").onclick = function () {
-            location.href = "InstructorCourseView.html";
-        };
+        
+        document.getElementById("done").addEventListener('click', function(e) {
+                    e.preventDefault();
+                    let pass= document.getElementById("done").value;
+                    location.href = "InstructorView1.html";
+                });
     </script>
 </div>
 </body>

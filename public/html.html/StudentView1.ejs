@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui">
     <title>Student Page</title>
     <link rel="stylesheet" href="/CSS/studentview1.css">
+   
 </head>
 <body>
-
+<% if(user!=null) {%>
+  <p><%=user.firstname%></p>
+  <% } %>
 <div class="courseview">
     <div class="logout" id="loButton">
         <button type="button" > Logout</button>
     </div>
     <div class="home">
         <div class="Logo">
-            <img  alt="logo" src="Logo.jpeg" width="700" height="300">
+            <img  alt="logo" src="html.html/Logo.jpeg" width="700" height="300">
         </div>
         <div class="info">
             <p>This is the Kings College student page.</p>
@@ -31,16 +34,16 @@
         <div class="searchresult">
             <!-- search results -->
             <ul>
-                <li><a href="StudentCurrentCourseView.html">Math 123</a></li>
-                <li><a href="StudentCurrentCourseView.html">Math 101</a></li>
+                <li><a href="html.html/StudentCurrentCourseView.html">Math 123</a></li>
+                <li><a href="html.html/StudentCurrentCourseView.html">Math 101</a></li>
             </ul>
 
         </div>
     </div>
 
 
-</div>
 <div class="Assignments">
+
     <p><b>Due Soon:</b></p>
     <table>
         <tr>
@@ -49,19 +52,20 @@
             <th>Due</th>
         </tr>
         <tr>
-            <td><a href="StudentCurrentCourseView.html">Assignment 1</a></td>
+            <td><a href="html.html/StudentCurrentCourseView.html">Assignment 1</a></td>
             <td>Math 123 </td>
             <td>Oct 27</td>
         </tr>
         <tr>
-            <td><a href="StudentCurrentCourseView.html">Assignment 2</a></td>
+            <td><a href="html.html/StudentCurrentCourseView.html">Assignment 2</a></td>
             <td>Math 101</td>
             <td>Nov 1</td>
         </tr>
     </table>
+
     <script >
     document.getElementById("loButton").onclick = function () {
-    location.href = "https://melaniebeni.github.io/chalkboard/index.html";
+    location.href = "/";
     };
     </script>
 </div>

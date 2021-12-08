@@ -1,14 +1,44 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
-// const router = express.Router();
 const path = require('path');
 var bodyParser=require("body-parser");
 const mongoose = require('mongoose');
+
+const router = express.Router();
+passport = require("passport");
+
+    LocalStrategy = require("passport-local").Strategy;
+    passportLocalMongoose =
+        require("passport-local-mongoose");
+    User = require("./model/user");
+ 
+var routes = require('./model/user')(passport);
+
+module.exports=router;
+
 var url= "mongodb+srv://beme6718:beme6718@cluster0.cqeub.mongodb.net/test?retryWrites=true&w=majority";
  
 mongoose.connect(url);
 var db = mongoose.connection;
+mongoose.connect(url,{useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useUnifiedTopology: true});
+ 
+app.set("view engine", "ejs");
+app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.urlencoded({extended: false}));
+app.use(require("express-session")({
+    secret: "Rusty is a dog",
+    resave: false,
+    saveUninitialized: false
+}));
+ 
+app.use(passport.initialize());
+app.use(passport.session());
+ 
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+ 
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
@@ -18,14 +48,14 @@ app.set('views','public/html.html/');
 
 
 app.post("/signup", function (req, res, next) {
-     
+    var instructor=req.body.instructor;
     var firstname= req.body.firstname;
     var lastname= req.body.lastname; 
     var email= req.body.email;
     var id= req.body.id;
     var pwd= req.body.pwd;
     var repeat= req.body.psw-repeat;
-
+    
     var user = {
       "firstname": firstname,
       "lastname": lastname, 
@@ -33,11 +63,20 @@ app.post("/signup", function (req, res, next) {
       "email": email,
       "pwd": pwd,
       "repeat": repeat
+      
     };
-    db.collection("Users").insertOne(user, function(err, collection) {
+    if (instructor=="instructor"){
+    db.collection("Instructors").insertOne(user, function(err, collection) {
     if (err) throw err;
     console.log("1 document inserted");
     });
+    }
+    else{
+      db.collection("Students").insertOne(user, function(err, collection) {
+    if (err) throw err;
+    console.log("1 document inserted");
+    });
+    }
   
 })
 
@@ -51,45 +90,115 @@ app.post("/create", function (req, res, next) {
     var q1=req.body.q1;
 
     var course = {
+    
       "coursename": coursename,
-      "description": description,"instructor": instructor,
+      "description": description,
+      "instructor": instructor,
       "materials": materials,
       "background": background,
       "lesson": lesson,
       "Q1": q1
     };
+    
+    if (err) throw err;
     db.collection("Courses").insertOne(course, function(err, collection) {
     if (err) throw err;
     console.log("1 document inserted");
     });
-  
-  //res.send(Login.html);
+    
 })
-app.get("/admin", function (req, res) {   
-db.collection("Courses").find({} , function (err, allDetails) {
-    if (err) {
-        console.log(err);
-    } else {
-      console.log("1 document inserted");
-      //res.send(allDetails.forEach(doc =>  print( doc.quality_level ) )); // checking contents of response
-      res.render("AdminView1.ejs", { user: allDetails })
-    }
-}).toArray();
-    });
-app.get('/login', function(req,res){
-   db.collection("devices").find( { $text: { $search: "@student.com" } } )
-, function(err, data) {
-      if(err) {
-         res.send(err.message);
-      }
-      else{
-        
-        res.send(data);
-      }}
+
+app.get("/admin", function (req, res, ) {   
+  db.collection("Students").find({}).toArray(function(err, result) {
+    if (err) throw err;
+    //res.send(result);
+    //console.log(result);
+    res.render("AdminView1.ejs", { student: result })
+    }) 
+    db.collection("Instructors").find({}).toArray(function(err, results) {
+    if (err) throw err;
+    //res.send(result);
+    //console.log(result);
+   //res.render("AdminView1.ejs", { i: results })
+    })
+});
+app.get("/course", function (req, res, ) {   
+  db.collection("Courses").find({}).toArray(function(err, result) {
+    if (err) throw err;
+    //res.send(result);
+    //console.log(result);
+    //res.render("StudentView1.ejs", { course: result })
+    }) 
+    
 });
 
-// app.use(require("express").static(__dirname + "/html.html"));
-// app.use(require("express").static(__dirname + "/CSS"));
+//Handling user login
+app.post("/login", function (req, res) {
+    var e= req.body.email;
+    var passwd= req.body.pwd;
+    console.log(e);
+    var h=req.body;
+    
+  
+db.collection("Students").findOne({email:e},{pwd: passwd},function (err, r) {
+    if (err) throw err;
+    //res.send(result);
+    console.log(req.body);
+    if(r){
+      console.log(r);
+    res.render("StudentView1.ejs", { user: r })
+    //res.redirect("InstructorView1.ejs");
+    }
+   // else{
+      //res.render("InstructorView1.ejs", { user: r })
+     
+    //}
+});
+db.collection("Instructors").findOne({email:e},{pwd: passwd},function (err, r) {
+    if (err) throw err;
+    //res.send(result);
+    console.log(req.body);
+    if(r){
+      console.log(r);
+    res.render("InstructorView1.ejs", { user: r })
+    //res.redirect("InstructorView1.ejs");
+    }
+   // else{
+      //res.render("InstructorView1.ejs", { user: r })
+     
+    //}
+});
+    db.collection("Admin").findOne({email:e},{pwd: passwd},function (err, r) {
+    if (err) throw err;
+    //res.send(result);
+    console.log(req.body);
+    if(r){
+      console.log(r);
+    res.redirect("/admin")
+    //res.redirect("InstructorView1.ejs");
+    }
+   // else{
+      //res.render("InstructorView1.ejs", { user: r })
+     
+    //}
+});
+ });
+//function isLoggedIn(req, res, next) {
+ //   if (req.isAuthenticated()) return next();
+ //   res.render("/InstructorView1");
+//}
+
+
+app.get("/search", function (req, res) {
+    var search=req.body.search;
+    console.log();
+db.collection("Students").findOne({search} , function (err, resu) {
+    if (err) throw err;
+    console.log(resu);
+    res.render("AdminView1.ejs", { user: resu })
+});
+});
+
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, 'index.html'));
 });
@@ -100,7 +209,5 @@ app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
 });
 
-// app.use('/', router);
-
-
+app.use('/', router);
 

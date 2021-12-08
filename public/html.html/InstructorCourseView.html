@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui">
     <title>English</title>
-    <link rel="stylesheet" href="html.html/InstructorCourseView.css">
+    <link rel="stylesheet" href="/CSS/InstructorCourseView.css">
 </head>
 <body>
 <div class="instructorCourseView">
 <div class="nav" id="devnav">
-    <a href="html.html/StudentView1.html">Home</a>
+    <a href="StudentView1.ejs">Home</a>
     <div class="dropdown">
         <!-- Not including completed or current -->
         <button class="dropbutton">Lessons</button>
@@ -59,7 +59,7 @@
             location.href = "GradeStudentWork.html";
         };
         document.getElementById("addLessons").onclick = function () {
-            location.href = "InstructorNewEditCourseView.html";
+            location.href = "/";
         };
         document.getElementById("pending").onclick = function () {
             location.href = "RosterView.html";
