@@ -23,13 +23,19 @@
             <p>This is the Kings College student page.</p>
             <!-- student info  -->
         </div>
+       
         <div class="classsearch">
             <!-- class search  -->
             <p>Search for classes by entering the id, class name, or instructor.</p>
 
-            <input type="search" name="search" id="search" placeholder="Search">
-            <button type="button"> Search</button>
-
+   
+       <form action="/croster" method="POST" style="border:1px solid #ccc">
+        <input class="bar" type="text" placeholder="Search" name="res">
+        <button><i class="search"></i></button>
+        <label for="id"><b>ID</b></label>
+        <input type="number" placeholder="Enter ID" id="id" name="id" required>
+        <input type="submit" value="Submit" >
+        </form>
         </div>
         <div class="searchresult">
             <!-- search results -->
@@ -39,9 +45,9 @@
             </ul>
 
         </div>
+        
     </div>
-
-
+</form>
 <div class="Assignments">
 
     <p><b>Due Soon:</b></p>
@@ -66,6 +72,9 @@
     <script >
     document.getElementById("loButton").onclick = function () {
     location.href = "/";
+    };
+    document.getElementById("add").onclick = function () {
+    location.href = "/studentEnroll";
     };
     </script>
 </div>

@@ -9,7 +9,7 @@
 <body>
 <div class="assign">
 <div class="nav" id="devnav">
-  <a href="StudentView1.ejs">Home</a>
+  <a href="/StudentView1.ejs">Home</a>
   <div class="dropdown">
     <!-- Not including completed or current -->
     <button class="dropbutton">Assignments</button>
@@ -24,7 +24,7 @@
     <div class="instructions">
   <p>Read chapter 7 on circles and answer the following questions show all work.</p>
   </div>
-  <form action="/StudentAssignView" method="get" action="login.php">
+  <form action="/sav" method="get" >
     <!--Question 1 -->
     <label><b>Question 1</b></label>
     <p>How do you find the circumference of a circle?</p>
@@ -45,10 +45,10 @@
     </div>
     <script>
       document.getElementById("submit").onclick = function () {
-        location.href = "StudentCurrentCourseView.html";
+        location.href = "html.html/StudentCurrentCourseView.html";
       };
       document.getElementById("draft").onclick = function () {
-        location.href = "StudentCurrentCourseView.html";
+        location.href = "html.html/StudentCurrentCourseView.html";
       };
     </script>
   </form>

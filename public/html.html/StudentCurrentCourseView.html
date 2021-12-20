@@ -28,7 +28,7 @@
     <div class="materials"><p><b>Materials</b><br><br>Thomas M. Connolly, Database Systems: A Practical Approach to Design, Implementation and Management, Sixth Edition, Addison-Wesley, 2014. ISBN 978-0132943260</p></div>
  <div class="coursecontent">
     <!--Ordered by due soon-->
-    <form action="//www.html.am/html-codes/forms/html-form-tag-action.cfm" target="result2" method="get">
+    <form action="/sav" method="get">
         <p><b>Assignments</b></p>
         <select name="lesson" multiple>
             <option value ="assign1">Assignment 1</option>
@@ -37,9 +37,7 @@
             <option value ="assign4">Assignment 4</option>
             <option value ="assign5">Assignment 5</option>
         </select>
-        <div class="lessons" id="Lessons">
-            <button type="button" >View Assignment</button>
-        </div>
+        <input type="submit" value="Submit" >
     </form>
     <!--Shows status if ungraded allows for editing-->
     <div class="Assignments">
@@ -87,10 +85,10 @@
         </div>
     <script>
         document.getElementById("Lessons").onclick = function () {
-            location.href = "StudentAssignView.html";
+            location.href = "/sav";
         };
         document.getElementById("home").onclick = function () {
-            location.href = "StudentView1.html";
+            location.href = "/test";
         };
         document.getElementById("loButton").onclick = function () {
             location.href = "/";

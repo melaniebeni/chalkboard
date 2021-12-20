@@ -9,31 +9,36 @@
 </head>
 <body>
 <div class="nav" id="devnav">
-    <a href="html.html/InstructorView1.html">Home</a>
+    <a href="InstructorView1.ejs">Home</a>
     <a href="/">Logout</a>
 </div>
 <h2>Math</h2>
 <h4>Pending Students</h4>
+<% if(student!=null) {%>
+  <p><%=student.id%></p>
 <table>
     <tr>
-        <th>Student ID</th>
-        <th>First</th>
-        <th>Last</th>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
         <th>Accept/Deny</th>
     </tr>
     <tr>
-        <td>12895</td>
-        <td>Carrie </td>
-        <td>Shaw</td>
-        <td><div class="add" id="add">
-            <button type="button" >Accept</button>
+        <td><%= student.id %></td>
+        <td><%= student.firstname %></td>
+        <td><%= student.lastname %></td>
+        <td>
+        <div class="add" id="add">
+            <button type="button" value=<%= student.id %> >Accept</button>
         </div>
             <div class="delete" id="delete">
-                <button type="button" >Deny</button>
+                <button type="button" value=<%= student.id%> >Deny</button>
             </div>
         </td>
     </tr>
-</table>
+<% } %>
+    </table>
+  
 <table>
     <tr>
         <th>Student ID</th>
@@ -56,11 +61,15 @@
 </table>
 
 <script>
-    document.getElementById("add").onclick = function () {
-        //adds student to roster/db shows course
+    document.getElementById("delete").onclick = function () {
+        e.preventDefault();
+                    let del= document.getElementById("delete").value;
+                    location.href = "/delete";
     };
-    document.getElementById("addLessons").onclick = function () {
-        //student gets message saying class request denyed
+    document.getElementById("add").onclick = function () {
+        e.preventDefault();
+                    let add= document.getElementById("add").value;
+                    location.href = "/add";
     };
 
 </script>

@@ -9,7 +9,7 @@
 <body>
 <div class="instructorCourseView">
 <div class="nav" id="devnav">
-    <a href="StudentView1.ejs">Home</a>
+    <a href="/test">Home</a>
     <div class="dropdown">
         <!-- Not including completed or current -->
         <button class="dropbutton">Lessons</button>
@@ -59,10 +59,10 @@
             location.href = "GradeStudentWork.html";
         };
         document.getElementById("addLessons").onclick = function () {
-            location.href = "/";
+            location.href = "InstructorCreateLessonAssignment.html";
         };
         document.getElementById("pending").onclick = function () {
-            location.href = "RosterView.html";
+            location.href = "/roster";
         };
 </script>
 </div>

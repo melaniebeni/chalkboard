@@ -25,9 +25,7 @@
         <tr>
             <td><%= student.id %></td>
             <td><%= student.firstname%></a></td>
-            <td>Math 101 <br><br>
-                Math 102
-            </td>
+            <td> <%= student.lastname%> </td>
         </tr>
         
         <% }) %>
@@ -41,13 +39,15 @@
     <table>
         <tr>
             <th>ID</th>
-            <th>Name</th>
+            <th>First</th>
+            <th>Last</th>
             <th>Courses</th>
         </tr>
        <% i.forEach(function(i){ %> 
         <tr>
             <td><%= i.id %></td>
             <td><%= i.firstname%></a></td>
+            <td><%= i.lastname%></a></td>
             <td>Math 101 <br><br>
                 Math 102
             </td>

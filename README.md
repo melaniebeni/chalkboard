@@ -15,27 +15,26 @@ Database: mongodb
 
 List of features:
 - Login/ Signup
-  https://melaniebeni.github.io/chalkboard/html.html/Login.html
-  https://melaniebeni.github.io/chalkboard/html.html/NewUser.html
+![alt text](ReadMeImages/Login.png)
+![alt text](ReadMeImages/Signup.png)
 - Student
 - 1. Adding/Viewing courses
-     https://melaniebeni.github.io/chalkboard/html.html/StudentView1.html
+     ![alt text](ReadMeImages/StudentView1.png)
+     ![alt text](ReadMeImages/StudentCourseView.png)
 - 2. Completeing assignments
-     https://melaniebeni.github.io/chalkboard/html.html/StudentCurrentCourseView.html
+     ![alt text](ReadMeImages/StudentAssignView.png)
 - Professor
 - 1. Creating/Editing/Viewing courses and assignments
-     https://melaniebeni.github.io/chalkboard/html.html/InstructorView1.html
-     https://melaniebeni.github.io/chalkboard/html.html/InstructorNewEditCourseView.html
-     https://melaniebeni.github.io/chalkboard/html.html/InstructorCourseView.html
+     ![alt text](ReadMeImages/InstructorView1.png)
+     ![alt text](ReadMeImages/InstructorCourseVeiw.png)
+     ![alt text](ReadMeImages/NewCourse.png)
 - 2. Grading Assignments
-     https://melaniebeni.github.io/chalkboard/html.html/GradeStudentWork.html
-- 3. Accepting/Denying students into courses
-     https://melaniebeni.github.io/chalkboard/html.html/RosterView.html
-- 4. View roster
-     https://melaniebeni.github.io/chalkboard/html.html/RosterView.html
+     ![alt text](ReadMeImages/InstructorGradePage.png)
+- 3. View roster/Accepting or Denying students into courses
+     ![alt text](ReadMeImages/Roster.png)
 - Admin
 - 1. View of all students, instructors, and their information
-     https://melaniebeni.github.io/chalkboard/html.html/AdminView1.html
+      ![alt text](ReadMeImages/Admin.png)
 
 ### Sitemap
 ![alt text](ReadMeImages/Sitemap.jpg)

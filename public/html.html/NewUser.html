@@ -20,9 +20,6 @@
         <label for="lastname"><b>Last Name</b></label>
         <input type="text" placeholder="Enter Last Name" id="lastname" name="lastname" required>
         <br><br>
-        <label for="id"><b>ID</b></label>
-        <input type="number" placeholder="Enter ID" id="id" name="id" required>
-        <br><br>
         <label for="email"><b>Email</b></label>
         <input type="text" placeholder="Enter Email" id="email" name="email" required>
         <br><br>
@@ -34,8 +31,7 @@
         <input type="submit" value="Submit" >
     
 </form>
-<div class="buttons">
-            <button id="cancel" class="float-left submit-button" onclick="myFunction()">Done</button>
+
 <p>Already have an account <a href="Login.html" style="color:dodgerblue">Login Here</a>.</p>
             <script>
                 document.getElementById("cancel").addEventListener('click', function(e) {
@@ -43,11 +39,7 @@
                     let pass= document.getElementById('cancel').value;
                         location.href = "/";
                 });
-                document.getElementById("done").addEventListener('click', function(e) {
-                    e.preventDefault();
-                    let pass= document.getElementById("done").value;
-                    location.href = "/";
-                });
+              
 
             </script>
             </div>

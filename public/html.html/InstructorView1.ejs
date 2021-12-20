@@ -18,43 +18,45 @@
         <img  alt="logo" src="html.html/Logo.jpeg" width="400" height="300">
     </div>
     <div class="info">
-        <p><b>Professor Jane Stern</b> <br>
-            Email: Jstern09@kings.edu <br>
-            Department: Math <br>
-            Instructor ID: 253781
+        <p><b><%= user.firstname %></b> <br>
+            Email: <%= user.email %><br>
+            Instructor ID: <%= user.id %>
         </p>
         <!-- instructor info  -->
     </div>
 
-    <div class="classsearch">
+    <div class="classsearch" >
         <!-- class search  -->
         <p>Search for classes by entering the id, class name, or instructor. </p>
         <button id="newButton" class="new" onclick="myFunction()">New</button>
 
-        <input  name="search" id="search" placeholder="Search">
+        <input  name="search" id="search" placeholder="Search" action="/search" method="GET">
 
         <button id="searchButton" class="search" onclick="sFunction()">Search</button>
     </div>
     <div class="searchresults">
+    <% if(course!=null) {%>
+    <p><%=course._id%></p>
         <ul>
-            <li><a href="html.html/InstructorCourseView.html">Math</a></li>
-            <li><a href="html.html/InstructorCourseView.html">Search Result 2</a></li>
+            <li><a href="html.html/InstructorCourseView.html"><%= course.coursename %></a></li>
+            
         </ul>
-
+    <% } %>
     </div>
-
+<% if(course!=null) {%>
+  <p><%=course._id%></p>
     <div class="currentcourses">
-        <!-- replaced by search results -->
-    <form action="RosterView.html" target="result2" method="get">
+        <!-- replaced by search results -->  
         <p><b>Courses</b></p>
-        <select name="classes" multiple>
-            <option value ="math">Math</option>
-            <option value ="english">English</option>
-            <option value ="cs">Computer Science</option>
-            <option value ="history">History</option>
-            <option value ="bio">Biology</option>
+        <% course.forEach(function(course){ %> 
+         <select name="classes" multiple>
+            <option value=<%= course.coursename %>><%= course.coursename %></option>
+         <% }) %>
         </select>
-        <div class="search" id="rosterButton">
+          <% } %>
+          
+
+        <div class="search"  id="rosterButton">
             <button type="button" > Roster</button>
         </div>
         <div class="search" id="ViewButton">
@@ -64,7 +66,6 @@
             <button type="button" > Edit</button>
         </div>
 
-    </form>
     </div>
 <script >
     function sFunction() {
@@ -72,7 +73,7 @@
         document.getElementById("searchresults").innerHTML = x;
     }
        document.getElementById("searchButton").onclick = function () {
-        location.href = " ";
+        location.href = "/search";
     };
        document.getElementById("newButton").onclick = function () {
            location.href = "html.html/InstructorNewEditCourseView.html";
@@ -81,7 +82,7 @@
         location.href = "/";
     };
        document.getElementById("rosterButton").onclick = function () {
-           location.href = "html.html/RosterView.html";
+           location.href = "/roster";
        };
        document.getElementById("ViewButton").onclick = function () {
            location.href = "html.html/InstructorCourseView.html";
