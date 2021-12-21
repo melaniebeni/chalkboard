@@ -173,7 +173,6 @@ app.post('/cassignment', function(req, res){
     var q3 = req.body.q3;
     var q4 = req.body.q4;
     var q5 = req.body.q5;
-    var q6 = req.body.q6;
 
     var lesson = {
       "coursename":coursename,
@@ -182,12 +181,12 @@ app.post('/cassignment', function(req, res){
       "q2": q2,
       "q3": q3,
       "q4": q4,
-      "q5": q5,
-      "q6": q6
+      "q5": q5
     };
-    db.collection("lesson").insertOne(student, function(err, collection) {
+    db.collection("lesson").insertOne(lesson, function(err, collection) {
     if (err) throw err;
     console.log("1 document inserted");
+    res.redirect("InstructorCourseView.html")
     }); 
 });
 app.get('/sav', function(req, res){
@@ -233,8 +232,7 @@ db.collection("Instructors").findOne({email:e},{pwd: passwd},function (err, re) 
       res.render("/login")
     }
 });
-    
-   
+  
 });
     db.collection("Admin").findOne({email:e},{pwd: passwd},function (err, r) {
     if (err) throw err;
@@ -245,6 +243,7 @@ db.collection("Instructors").findOne({email:e},{pwd: passwd},function (err, re) 
 });
    
 });
+
 app.get('/delete', function(req, res){
   var del= req.body.delete;
   db.collection("roster").remove({id: del} ,function (err, r) {

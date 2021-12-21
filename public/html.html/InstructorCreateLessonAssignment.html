@@ -7,40 +7,45 @@
     <link rel="stylesheet" href="/CSS/instructorcreatelessonassign.css">
 </head>
 <body>
+  
 <div class="newcourse">
     <div class="search" id="logoutbtn">
         <button type="button">Logout</button>
     </div>
-    <p>Create a new lesson  </p>
-<div class="les">
-        <label><b>Lessons</b></label>
+    
+    <form action="/cassignment" method="POST" style="border:1px solid #ccc">
+
+        <label><b>Lessons</b></label
         <br><br>
+        <p>Create a new lesson  </p>
+        <br><br>
+    <div class="les">
         <label><b>Lesson Name</b></label>
         <input type="text" name="search" id="Lesson" placeholder="Enter Here">
         <br><br>
     </div>
-    <div class="Q1">
-        <label><b>Question </b></label>
-        <input type="text" name="search" id="q1" placeholder="Enter Here">
+    <div class="coursename">
+        <label><b>Course Name </b></label>
+        <input type="text" name="search" id="coursename" placeholder="Enter Here">
     </div>
-    <div class="Q2">
+    <div class="Q1">
         <label><b>Question 1</b></label>
         <input type="text" name="search" id="q1" placeholder="Enter Here">
     </div>
-    <div class="Q3">
+    <div class="Q2">
         <label><b>Question 2</b></label>
         <input type="text" name="search" id="q2" placeholder="Enter Here">
     </div>
+    <div class="Q3">
+        <label><b>Question 3</b></label>
+        <input type="text" name="search" id="q3" placeholder="Enter Here">
+    </div>
     <div class="Q4">
         <label><b>Question 4</b></label>
-        <input type="text" name="search" id="q3" placeholder="Enter Here">
+        <input type="text" name="search" id="q4" placeholder="Enter Here">
     </div>
     <div class="Q5">
         <label><b>Question 5</b></label>
-        <input type="text" name="search" id="q4" placeholder="Enter Here">
-    </div>
-    <div class="Q6">
-        <label><b>Question 6</b></label>
         <input type="text" name="search" id="q5" placeholder="Enter Here">
     </div>
     <div class="answers">
@@ -49,7 +54,9 @@
     <br><br>
     </div>
     <input type="submit" value="Submit" >
-    
+    <div class="buttons">
+            <button id="done"  onclick="myFunction()">Done</button>
+        </div>
 </form>
         
     <script>
@@ -57,7 +64,7 @@
             location.href = "/";
         };
         
-        document.getElementById("submit").addEventListener('click', function(e) {
+        document.getElementById("done").addEventListener('click', function(e) {
                     e.preventDefault();
                     let pass= document.getElementById("done").value;
                     location.href = "InstructorCourseView.html";
